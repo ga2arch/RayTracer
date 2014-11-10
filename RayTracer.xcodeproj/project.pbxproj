@@ -14,6 +14,7 @@
 		E0872C5E1A10D85F0068EC2D /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C5C1A10D85F0068EC2D /* Shape.cpp */; };
 		E0872C611A10D8B80068EC2D /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C5F1A10D8B80068EC2D /* Color.cpp */; };
 		E0872C641A10DB9A0068EC2D /* Intersection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C621A10DB9A0068EC2D /* Intersection.cpp */; };
+		E0872C671A10EC850068EC2D /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C651A10EC850068EC2D /* Light.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,8 @@
 		E0872C601A10D8B80068EC2D /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 		E0872C621A10DB9A0068EC2D /* Intersection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Intersection.cpp; sourceTree = "<group>"; };
 		E0872C631A10DB9A0068EC2D /* Intersection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intersection.h; sourceTree = "<group>"; };
+		E0872C651A10EC850068EC2D /* Light.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Light.cpp; sourceTree = "<group>"; };
+		E0872C661A10EC850068EC2D /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				E0872C601A10D8B80068EC2D /* Color.h */,
 				E0872C621A10DB9A0068EC2D /* Intersection.cpp */,
 				E0872C631A10DB9A0068EC2D /* Intersection.h */,
+				E0872C651A10EC850068EC2D /* Light.cpp */,
+				E0872C661A10EC850068EC2D /* Light.h */,
 			);
 			path = RayTracer;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			files = (
 				E0872C5B1A10D5800068EC2D /* Ray.cpp in Sources */,
 				E0872C611A10D8B80068EC2D /* Color.cpp in Sources */,
+				E0872C671A10EC850068EC2D /* Light.cpp in Sources */,
 				E0872C641A10DB9A0068EC2D /* Intersection.cpp in Sources */,
 				E07718B91A10CD480020A0D8 /* main.cpp in Sources */,
 				E0872C5E1A10D85F0068EC2D /* Shape.cpp in Sources */,

@@ -20,9 +20,11 @@ void ShapeSet::clear_shapes() {
 
 // Plane
 
-Plane::Plane(const Point& pos, const Vector& norm, const Color& col): pos(pos),
-                                                                      norm(norm.normalized()),
-                                                                      col(col) {};
+Plane::Plane(const Point& pos,
+             const Vector& norm,
+             const Color& col,
+             bool beye): pos(pos), norm(norm.normalized()),
+                         col(col), bullseye(beye) {};
 
 bool Plane::intersect(Intersection& i) {
     
@@ -38,6 +40,10 @@ bool Plane::intersect(Intersection& i) {
     i.shape = this;
     i.color = col;
     i.normal = norm;
+    
+    if (bullseye && std::fmod((i.position() - pos).length() * 0.25f, 1.0f) > 0.5f) {
+        i.color *= 0.2f;
+    }
     
     return true;
 }

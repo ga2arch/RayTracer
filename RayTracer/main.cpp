@@ -46,7 +46,7 @@ int main(int argc, const char * argv[]) {
     
     Plane plane(Point(0.0f, -2.0f, 0.0f),
                 Vector(0.0f, 1.0f, 0.0f),
-                Color(1.0f, 0.5f, 0.8f));
+                Color(1.0f, 0.5f, 0.8f), true);
     
     shapet_set.add_shape(&plane);
     

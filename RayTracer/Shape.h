@@ -22,6 +22,7 @@ public:
     virtual ~Shape() {};
     
     virtual bool intersect(Intersection& i) = 0;
+    virtual void find_ligths(std::list<Shape*>& out_lights) {};
 };
 
 class ShapeSet: public Shape {
@@ -40,6 +41,15 @@ public:
         return intersect_any;
     };
     
+    virtual void find_ligths(std::list<Shape*>& out_lights) {
+        
+        for (auto& shape: shapes) {
+            shape->find_ligths(out_lights);
+        }
+
+    };
+
+    
     void add_shape(Shape* shape);
     void clear_shapes();
     
@@ -51,7 +61,7 @@ protected:
 class Plane: public Shape {
     
 public:
-    Plane(const Point& pos, const Vector& norm, const Color& col);
+    Plane(const Point& pos, const Vector& norm, const Color& col, bool beye);
     
     virtual ~Plane() {};
     
@@ -61,6 +71,7 @@ protected:
     Point pos;
     Vector norm;
     Color col;
+    bool bullseye;
     
 };
 
