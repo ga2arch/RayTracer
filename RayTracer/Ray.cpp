@@ -27,3 +27,27 @@ Point Ray::calculate(const float t) const {
     return origin + t*dir;
 }
 
+// Utils
+
+Ray make_camera_ray(float fov,
+                    const Point& origin,
+                    const Vector& target,
+                    const Vector& targetUp,
+                    float xPos,
+                    float yPos) {
+    
+    Vector forward = (target - origin).normalized();
+    Vector right = cross(forward, targetUp).normalized();
+    Vector up = cross(right, forward).normalized();
+    
+    float tanFov = std::tan(fov * M_PI / 180.0f);
+    
+    Ray ray;
+    ray.origin = origin;
+    ray.dir = forward + right * (xPos - 0.5f) * tanFov
+    + up  * (yPos - 0.5f) * tanFov;
+    ray.dir.normalize();
+    
+    return ray;
+    
+}
