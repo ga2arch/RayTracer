@@ -11,6 +11,8 @@
 		E07718C11A10CDBE0020A0D8 /* RayTracer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E07718BF1A10CDBE0020A0D8 /* RayTracer.cpp */; };
 		E07718C41A10D3E70020A0D8 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E07718C21A10D3E70020A0D8 /* Vector.cpp */; };
 		E0872C5B1A10D5800068EC2D /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C591A10D5800068EC2D /* Ray.cpp */; };
+		E0872C5E1A10D85F0068EC2D /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C5C1A10D85F0068EC2D /* Shape.cpp */; };
+		E0872C611A10D8B80068EC2D /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C5F1A10D8B80068EC2D /* Color.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +36,10 @@
 		E07718C31A10D3E70020A0D8 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
 		E0872C591A10D5800068EC2D /* Ray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ray.cpp; sourceTree = "<group>"; };
 		E0872C5A1A10D5800068EC2D /* Ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ray.h; sourceTree = "<group>"; };
+		E0872C5C1A10D85F0068EC2D /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
+		E0872C5D1A10D85F0068EC2D /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
+		E0872C5F1A10D8B80068EC2D /* Color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Color.cpp; sourceTree = "<group>"; };
+		E0872C601A10D8B80068EC2D /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,10 @@
 				E07718C31A10D3E70020A0D8 /* Vector.h */,
 				E0872C591A10D5800068EC2D /* Ray.cpp */,
 				E0872C5A1A10D5800068EC2D /* Ray.h */,
+				E0872C5C1A10D85F0068EC2D /* Shape.cpp */,
+				E0872C5D1A10D85F0068EC2D /* Shape.h */,
+				E0872C5F1A10D8B80068EC2D /* Color.cpp */,
+				E0872C601A10D8B80068EC2D /* Color.h */,
 			);
 			path = RayTracer;
 			sourceTree = "<group>";
@@ -134,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0872C5B1A10D5800068EC2D /* Ray.cpp in Sources */,
+				E0872C611A10D8B80068EC2D /* Color.cpp in Sources */,
 				E07718B91A10CD480020A0D8 /* main.cpp in Sources */,
+				E0872C5E1A10D85F0068EC2D /* Shape.cpp in Sources */,
 				E07718C11A10CDBE0020A0D8 /* RayTracer.cpp in Sources */,
 				E07718C41A10D3E70020A0D8 /* Vector.cpp in Sources */,
 			);
