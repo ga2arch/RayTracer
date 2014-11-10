@@ -12,8 +12,9 @@
 #include <stdio.h>
 #include "Ray.h"
 #include "Vector.h"
-#include "Shape.h"
 #include "Color.h"
+
+class Shape;
 
 class Intersection {
     

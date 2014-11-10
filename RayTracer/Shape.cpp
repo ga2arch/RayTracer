@@ -7,3 +7,11 @@
 //
 
 #include "Shape.h"
+
+void ShapeSet::add_shape(Shape *shape) {
+    shapes.push_back(shape);
+}
+
+void ShapeSet::clear_shapes() {
+    shapes.clear();
+}
