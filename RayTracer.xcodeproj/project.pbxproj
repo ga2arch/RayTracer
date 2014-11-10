@@ -13,6 +13,7 @@
 		E0872C5B1A10D5800068EC2D /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C591A10D5800068EC2D /* Ray.cpp */; };
 		E0872C5E1A10D85F0068EC2D /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C5C1A10D85F0068EC2D /* Shape.cpp */; };
 		E0872C611A10D8B80068EC2D /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C5F1A10D8B80068EC2D /* Color.cpp */; };
+		E0872C641A10DB9A0068EC2D /* Intersection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C621A10DB9A0068EC2D /* Intersection.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,8 @@
 		E0872C5D1A10D85F0068EC2D /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
 		E0872C5F1A10D8B80068EC2D /* Color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Color.cpp; sourceTree = "<group>"; };
 		E0872C601A10D8B80068EC2D /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		E0872C621A10DB9A0068EC2D /* Intersection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Intersection.cpp; sourceTree = "<group>"; };
+		E0872C631A10DB9A0068EC2D /* Intersection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intersection.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				E0872C5D1A10D85F0068EC2D /* Shape.h */,
 				E0872C5F1A10D8B80068EC2D /* Color.cpp */,
 				E0872C601A10D8B80068EC2D /* Color.h */,
+				E0872C621A10DB9A0068EC2D /* Intersection.cpp */,
+				E0872C631A10DB9A0068EC2D /* Intersection.h */,
 			);
 			path = RayTracer;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			files = (
 				E0872C5B1A10D5800068EC2D /* Ray.cpp in Sources */,
 				E0872C611A10D8B80068EC2D /* Color.cpp in Sources */,
+				E0872C641A10DB9A0068EC2D /* Intersection.cpp in Sources */,
 				E07718B91A10CD480020A0D8 /* main.cpp in Sources */,
 				E0872C5E1A10D85F0068EC2D /* Shape.cpp in Sources */,
 				E07718C11A10CDBE0020A0D8 /* RayTracer.cpp in Sources */,

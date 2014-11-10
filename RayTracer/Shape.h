@@ -13,10 +13,8 @@
 #include "Vector.h"
 #include "Ray.h"
 
-class Intersection {
-    
-    Ray ray;
-        
+class Shape {
+            
 };
 
 #endif /* defined(__RayTracer__Shape__) */
