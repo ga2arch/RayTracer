@@ -31,7 +31,7 @@ public:
         return false;
     };
     
-    virtual void find_ligths(std::list<Shape*>& out_lights) {};
+    virtual void find_lights(std::list<Shape*>& out_lights) {};
 };
 
 class ShapeSet: public Shape {
@@ -50,10 +50,10 @@ public:
         return intersect_any;
     };
     
-    virtual void find_ligths(std::list<Shape*>& out_lights) {
+    virtual void find_lights(std::list<Shape*>& out_lights) {
         
-        for (auto& shape: shapes) {
-            shape->find_ligths(out_lights);
+        for (Shape* shape: shapes) {
+            shape->find_lights(out_lights);
         }
 
     };

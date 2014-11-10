@@ -39,6 +39,7 @@ bool Plane::intersect(Intersection& i) {
     i.t = t;
     i.shape = this;
     i.color = col;
+    i.emitted = Color();
     i.normal = norm;
     
     if (bullseye && std::fmod((i.position() - pos).length() * 0.25f, 1.0f) > 0.5f) {

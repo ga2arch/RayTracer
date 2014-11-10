@@ -33,7 +33,8 @@ protected:
 };
 
 class RectangleLight: public Light {
-    
+
+public:
     RectangleLight(const Point& pos,
                    const Vector& side1,
                    const Vector& side2,
@@ -41,6 +42,11 @@ class RectangleLight: public Light {
                    float power);
     
     virtual bool intersect(Intersection& i);
+    virtual bool sample_surface(float u1,
+                                float u2,
+                                const Point& ref_pos,
+                                Point& out_pos,
+                                Vector& out_norm);
     
     virtual ~RectangleLight() {};
     

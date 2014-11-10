@@ -57,3 +57,19 @@ bool RectangleLight::intersect(Intersection& i) {
     
     return true;
 }
+
+bool RectangleLight::sample_surface(float u1, float u2,
+                                    const Point &ref_pos,
+                                    Point &out_pos,
+                                    Vector &out_norm) {
+    
+    out_norm = cross(side1, side2).normalized();
+    out_pos = position + side1 * u1 + side2 * u2;
+
+    if (dot(out_norm, out_pos - ref_pos) > 0.0f)
+        out_norm *= -1.0f;
+    
+    return true;
+    
+}
+
