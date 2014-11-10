@@ -28,6 +28,12 @@ void Vector::normalize() {
     *this /= len;
 }
 
+Vector Vector::normalized() const {
+    Vector r(*this);
+    r.normalize();
+    return r;
+}
+
 // Operators
 
 Vector& Vector::operator=(const Vector& v) {

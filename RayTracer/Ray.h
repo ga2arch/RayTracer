@@ -32,4 +32,16 @@ public:
     Point calculate(const float t) const;
 };
 
+Ray make_camera_ray(float fov,
+                    const Point& origin,
+                    const Vector& target,
+                    const Vector& up,
+                    float xPos,
+                    float yPos) {
+    
+    Vector forward = (target - origin).normalized();
+    
+    
+}
+
 #endif /* defined(__RayTracer__Ray__) */
