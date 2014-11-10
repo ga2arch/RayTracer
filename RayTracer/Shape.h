@@ -22,6 +22,15 @@ public:
     virtual ~Shape() {};
     
     virtual bool intersect(Intersection& i) = 0;
+    
+    virtual bool sample_surface(float u1,
+                                float u2,
+                                const Point& ref_point,
+                                Point& out_pos,
+                                Vector& out_normal) {
+        return false;
+    };
+    
     virtual void find_ligths(std::list<Shape*>& out_lights) {};
 };
 

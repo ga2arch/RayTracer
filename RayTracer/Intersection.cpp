@@ -9,16 +9,28 @@
 #include "Intersection.h"
 
 Intersection::Intersection(): ray(), t(kRayTMax),
-                              shape(nullptr), color(), normal() {};
+                              shape(nullptr), color(),
+                              normal(), emitted() {};
 
 Intersection::Intersection(const Intersection& i): ray(i.ray), t(i.t),
                                                    shape(i.shape), color(i.color),
-                                                   normal(i.normal) {}
+                                                   normal(i.normal), emitted() {}
 
 Intersection::Intersection(const Ray& r): ray(r),
                                           t(r.tmax),
-                                          shape(nullptr),
+                                          shape(nullptr), emitted(),
                                           color(), normal() {}
+
+Intersection& Intersection::operator=(const Intersection& i) {
+    ray = i.ray;
+    t = i.t;
+    shape = i.shape;
+    color = i.color;
+    emitted = i.emitted;
+    normal = i.normal;
+    
+    return *this;
+}
 
 bool Intersection::hit() const {
     return !(shape == nullptr);

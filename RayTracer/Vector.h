@@ -26,7 +26,7 @@ public:
     float length() const;
     float length2() const;
     
-    void normalize();
+    float normalize();
     Vector normalized() const;
     
     Vector& operator  =(const Vector& v);

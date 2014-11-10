@@ -12,11 +12,12 @@
 #include <stdio.h>
 #include "Shape.h"
 
-class Ligth: public Shape {
+class Light: public Shape {
     
-    Ligth(Color& color, const float power);
+public:
+    Light(const Color& color, const float power);
     
-    virtual ~Ligth() {};
+    virtual ~Light() {};
     virtual void find_lights(std::list<Shape*>& out_ligths) {
         out_ligths.push_back(this);
     };
@@ -28,6 +29,24 @@ class Ligth: public Shape {
 protected:
     Color color;
     float power;
+    
+};
+
+class RectangleLight: public Light {
+    
+    RectangleLight(const Point& pos,
+                   const Vector& side1,
+                   const Vector& side2,
+                   const Color& color,
+                   float power);
+    
+    virtual bool intersect(Intersection& i);
+    
+    virtual ~RectangleLight() {};
+    
+protected:
+    Point position;
+    Vector side1, side2;
     
 };
 

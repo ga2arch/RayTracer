@@ -23,6 +23,7 @@ public:
     float t;
     Shape* shape;
     Color color;
+    Color emitted;
     Vector normal;
     
     Intersection();

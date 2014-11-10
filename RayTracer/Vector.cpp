@@ -23,9 +23,10 @@ float Vector::length2() const {
     return x*x + y*y + z*z;
 }
 
-void Vector::normalize() {
+float Vector::normalize() {
     auto len = length();
     *this /= len;
+    return len;
 }
 
 Vector Vector::normalized() const {
