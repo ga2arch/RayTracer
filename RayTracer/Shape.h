@@ -47,4 +47,20 @@ protected:
     
 };
 
+class Plane: public Shape {
+    
+public:
+    Plane(const Point& pos, const Vector& norm, const Color& col);
+    
+    virtual ~Plane() {};
+    
+    virtual bool intersect(Intersection& i);
+    
+protected:
+    Point pos;
+    Vector norm;
+    Color col;
+    
+};
+
 #endif /* defined(__RayTracer__Shape__) */

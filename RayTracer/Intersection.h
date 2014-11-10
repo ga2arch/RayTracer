@@ -17,7 +17,8 @@
 class Shape;
 
 class Intersection {
-    
+
+public:
     Ray ray;
     float t;
     Shape* shape;
