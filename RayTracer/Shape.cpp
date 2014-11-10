@@ -21,7 +21,7 @@ void ShapeSet::clear_shapes() {
 // Plane
 
 Plane::Plane(const Point& pos, const Vector& norm, const Color& col): pos(pos),
-                                                                      norm(norm),
+                                                                      norm(norm.normalized()),
                                                                       col(col) {};
 
 bool Plane::intersect(Intersection& i) {

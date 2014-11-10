@@ -15,8 +15,8 @@ Color::Color(const float f): r(f), g(f), b(f) {};
 
 void Color::clamp(float min, float max) {
     r = std::max(min, std::min(max, r));
-    g = std::max(min, std::min(max, r));
-    b = std::max(min, std::min(max, r));
+    g = std::max(min, std::min(max, g));
+    b = std::max(min, std::min(max, b));
 }
 
 Color& Color::operator=(const Color& c) {

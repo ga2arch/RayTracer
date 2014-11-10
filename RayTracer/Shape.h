@@ -30,13 +30,14 @@ public:
     virtual ~ShapeSet() {};
     
     virtual bool intersect(Intersection& i) {
+        bool intersect_any = false;
         for (auto& shape: shapes) {
             
             if (shape->intersect(i))
-                return true;
+                intersect_any = true;
         }
         
-        return false;
+        return intersect_any;
     };
     
     void add_shape(Shape* shape);
