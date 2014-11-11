@@ -17,6 +17,9 @@
 #include "Sphere.h"
 #include "Plane.h"
 
+// Lights
+#include "RectangleLight.h"
+
 int main(int argc, const char * argv[]) {
     
     ShapeSet scene;

@@ -18,9 +18,4 @@ void ShapeSet::clear_shapes() {
     shapes.clear();
 }
 
-// Plane
-
-
-// Sphere
-
 
