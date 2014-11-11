@@ -13,8 +13,6 @@
 #include <iostream>
 #include <algorithm>
 
-using uchar = unsigned char;
-
 class Color {
     
 public:
@@ -26,8 +24,6 @@ public:
     explicit Color(float f);
     
     void clamp(float min = 0.0f, float max = 1.0f);
-    
-    std::tuple<uchar, uchar, uchar> to_rgb();
     
     Color& operator  =(const Color& v);
     Color& operator +=(const Color& v);

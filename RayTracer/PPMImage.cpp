@@ -8,7 +8,7 @@
 
 #include "PPMImage.h"
 
-PPMImage::PPMImage(const std::string filename, int w, int h):
+PPMImage::PPMImage(const std::string filename, size_t w, size_t h):
     filename(filename),
     file(filename, std::ios::out | std::ios::binary),
     w(w), h(h) {
@@ -25,5 +25,9 @@ void PPMImage::write_header() {
 }
 
 void PPMImage::write_color(Color& pixel_color) {
-    file << &pixel_color;
+    unsigned char r, g, b;
+    r = static_cast<unsigned char>(pixel_color.r * 255.0f);
+    g = static_cast<unsigned char>(pixel_color.g * 255.0f);
+    b = static_cast<unsigned char>(pixel_color.b * 255.0f);
+    file << r << g << b;
 }

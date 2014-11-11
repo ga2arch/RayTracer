@@ -39,14 +39,18 @@ struct Rng {
 class RayTracer {
     
 public:
-    ShapeSet scene;
-    std::list<Shape*> lights;
-    
-    RayTracer(ShapeSet& scene);
+    RayTracer(ShapeSet& scene, size_t w, size_t h, size_t nms);
     
     void draw();
 
 private:
+    ShapeSet& scene;
+    std::list<Shape*> lights;
+    
+    size_t kWidth;
+    size_t kHeight;
+    size_t kNumPixelSamples;
+    
     Ray make_camera_ray(float fov,
                         const Point& origin,
                         const Vector& target,

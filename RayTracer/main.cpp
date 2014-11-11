@@ -15,9 +15,8 @@
 
 int main(int argc, const char * argv[]) {
     
-    Rng rng;
     ShapeSet scene;
-    RayTracer rtracer(scene);
+    RayTracer raytracer(scene, 512, 512, 12);
     
     Plane plane(Point(0.0f, -2.0f, 0.0f),
                 Vector(0.0f, 1.0f, 0.0f),
@@ -46,5 +45,5 @@ int main(int argc, const char * argv[]) {
                                   0.75f);
     scene.add_shape(&smallAreaLight);
    
-    rtracer.draw();
+    raytracer.draw();
 }

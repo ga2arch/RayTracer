@@ -18,7 +18,7 @@
 class PPMImage {
     
 public:
-    PPMImage(const std::string filename, int w, int h);
+    PPMImage(const std::string filename, size_t w, size_t h);
     
     void write_header();
     void write_color(Color& pixel_color);
@@ -27,8 +27,7 @@ private:
     std::string filename;
     std::ofstream file;
     
-    int w, h;
-    
+    size_t w, h;
 };
 
 

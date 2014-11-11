@@ -8,7 +8,8 @@
 
 #include "RayTracer.h"
 
-RayTracer::RayTracer(ShapeSet& scene): scene(scene) {};
+RayTracer::RayTracer(ShapeSet& scene, size_t w, size_t h, size_t nms):
+    scene(scene), kWidth(w), kHeight(h), kNumPixelSamples(nms) {};
 
 Ray RayTracer::make_camera_ray(float fov,
                     const Point& origin,
@@ -37,8 +38,6 @@ Color RayTracer::trace(float x, float y) {
     Color pixel_color(0.0f, 0.0f, 0.0f);
     
     for (size_t si = 0; si < kNumPixelSamples; si++) {
-        
-        
         float yu = 1.0f - ((y + rng.nextFloat()) / float(kHeight - 1));
         float xu = (x + rng.nextFloat()) / float(kWidth - 1);
         
@@ -83,8 +82,7 @@ Color RayTracer::trace(float x, float y) {
 
 void RayTracer::draw() {
     PPMImage image("out.ppm", kWidth, kHeight);
-
-    std::list<Shape*> lights;
+    
     scene.find_lights(lights);
     
     for (size_t y = 0; y < kHeight; y++) {
