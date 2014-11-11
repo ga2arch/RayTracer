@@ -13,6 +13,10 @@
 #include "RayTracer.h"
 #include "PPMImage.h"
 
+// Shapes
+#include "Sphere.h"
+#include "Plane.h"
+
 int main(int argc, const char * argv[]) {
     
     ShapeSet scene;

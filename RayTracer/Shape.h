@@ -67,41 +67,4 @@ protected:
     
 };
 
-class Plane: public Shape {
-    
-public:
-    Plane(const Point& pos, const Vector& norm, const Color& col, bool beye);
-    
-    virtual ~Plane() {};
-    
-    virtual bool intersect(Intersection& i);
-    
-protected:
-    Point pos;
-    Vector norm;
-    Color col;
-    bool bullseye;
-    
-};
-
-class Sphere: public Shape {
-    
-public:
-    Sphere(const Point& pos,
-           const Vector& norm,
-           const Color& col,
-           float radius);
-    
-    virtual ~Sphere() {};
-    
-    virtual bool intersect(Intersection& i);
-    
-protected:
-    Point pos;
-    Vector norm;
-    Color col;
-    float radius;
-    
-};
-
 #endif /* defined(__RayTracer__Shape__) */
