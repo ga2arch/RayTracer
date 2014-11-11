@@ -19,6 +19,21 @@ void Color::clamp(float min, float max) {
     b = std::max(min, std::min(max, b));
 }
 
+std::tuple<uchar, uchar, uchar> Color::to_rgb() {
+    uchar r_, g_, b_;
+    r_ = static_cast<unsigned char>(r * 255.0f);
+    g_ = static_cast<unsigned char>(g * 255.0f);
+    b_ = static_cast<unsigned char>(b * 255.0f);
+    
+    return std::make_tuple(r_, g_, b_);
+}
+
+std::ostream& operator <<(std::ostream& out, Color& color) {
+    auto rgb = color.to_rgb();
+    out << std::get<0>(rgb) << std::get<1>(rgb) << std::get<2>(rgb);
+    return out;
+}
+
 Color& Color::operator=(const Color& c) {
     r = c.r;
     g = c.g;

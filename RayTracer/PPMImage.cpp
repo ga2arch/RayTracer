@@ -25,9 +25,5 @@ void PPMImage::write_header() {
 }
 
 void PPMImage::write_color(Color& pixel_color) {
-    unsigned char r, g, b;
-    r = static_cast<unsigned char>(pixel_color.r * 255.0f);
-    g = static_cast<unsigned char>(pixel_color.g * 255.0f);
-    b = static_cast<unsigned char>(pixel_color.b * 255.0f);
-    file << r << g << b;
+    file << &pixel_color;
 }

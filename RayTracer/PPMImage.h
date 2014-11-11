@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <sstream>
 #include <fstream>
+#include <iostream>
 #include "Color.h"
 
 class PPMImage {
@@ -28,5 +29,6 @@ public:
     int w, h;
     
 };
+
 
 #endif /* defined(__RayTracer__PPMImage__) */
