@@ -14,7 +14,6 @@ PPMImage::PPMImage(const std::string filename, int w, int h):
     w(w), h(h) {
     
     write_header();
-        
 }
 
 void PPMImage::write_header() {
@@ -25,7 +24,7 @@ void PPMImage::write_header() {
     file << header.str();
 }
 
-void PPMImage::write_color(Color &pixel_color) {
+void PPMImage::write_color(Color& pixel_color) {
     unsigned char r, g, b;
     r = static_cast<unsigned char>(pixel_color.r * 255.0f);
     g = static_cast<unsigned char>(pixel_color.g * 255.0f);
