@@ -22,7 +22,8 @@ public:
     
     void write_header();
     void write_color(Color& pixel_color);
-    
+   
+private:
     std::string filename;
     std::ofstream file;
     

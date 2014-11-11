@@ -13,6 +13,7 @@
 #include "Shape.h"
 #include "Ray.h"
 #include "Light.h"
+#include "PPMImage.h"
 
 const size_t kWidth = 512;
 const size_t kHeight = 512;
@@ -35,16 +36,26 @@ struct Rng {
     }
 };
 
-Ray make_camera_ray(float fov,
-                    const Point& origin,
-                    const Vector& target,
-                    const Vector& targetUp,
-                    float xPos,
-                    float yPos);
+class RayTracer {
+    
+public:
+    ShapeSet scene;
+    std::list<Shape*> lights;
+    
+    RayTracer(ShapeSet& scene);
+    
+    void draw();
 
-Color trace(ShapeSet& scene,
-            std::list<Shape*>& lights,
-            float x, float y);
+private:
+    Ray make_camera_ray(float fov,
+                        const Point& origin,
+                        const Vector& target,
+                        const Vector& targetUp,
+                        float xPos,
+                        float yPos);
+    
+    Color trace(float x, float y);
 
+};
 
 #endif /* defined(__RayTracer__RayTracer__) */

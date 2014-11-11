@@ -9,15 +9,15 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+
 #include "RayTracer.h"
 #include "PPMImage.h"
-
 
 int main(int argc, const char * argv[]) {
     
     Rng rng;
     ShapeSet scene;
-    PPMImage image("out.ppm", kWidth, kHeight);
+    RayTracer rtracer(scene);
     
     Plane plane(Point(0.0f, -2.0f, 0.0f),
                 Vector(0.0f, 1.0f, 0.0f),
@@ -45,20 +45,6 @@ int main(int argc, const char * argv[]) {
                                   Color(1.0f, 1.0f, 0.5f),
                                   0.75f);
     scene.add_shape(&smallAreaLight);
-    
-    std::list<Shape*> lights;
-    scene.find_lights(lights);
-
-    for (size_t y = 0; y < kHeight; y++) {
-
-        for (size_t x = 0; x < kWidth; x++) {
-            
-            auto pixel_color = trace(scene, lights, x, y);
-            
-            pixel_color /= kNumPixelSamples;
-            pixel_color.clamp();
-            
-            image.write_color(pixel_color);
-        }
-    }
+   
+    rtracer.draw();
 }
