@@ -22,12 +22,12 @@ Intersection::Intersection(const Ray& r): ray(r),
                                           color(), normal() {}
 
 Intersection& Intersection::operator=(const Intersection& i) {
-    ray = i.ray;
-    t = i.t;
-    shape = i.shape;
-    color = i.color;
+    ray     = i.ray;
+    t       = i.t;
+    shape   = i.shape;
+    color   = i.color;
     emitted = i.emitted;
-    normal = i.normal;
+    normal  = i.normal;
     
     return *this;
 }

@@ -66,9 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				E07718C21A10D3E70020A0D8 /* Vector.cpp */,
-				E07718C31A10D3E70020A0D8 /* Vector.h */,
 				E0872C591A10D5800068EC2D /* Ray.cpp */,
-				E0872C5A1A10D5800068EC2D /* Ray.h */,
 			);
 			name = linear;
 			sourceTree = "<group>";
@@ -77,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				E0872C5C1A10D85F0068EC2D /* Shape.cpp */,
-				E0872C5D1A10D85F0068EC2D /* Shape.h */,
 			);
 			name = shapes;
 			sourceTree = "<group>";
@@ -86,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				E0872C651A10EC850068EC2D /* Light.cpp */,
-				E0872C661A10EC850068EC2D /* Light.h */,
 			);
 			name = lights;
 			sourceTree = "<group>";
@@ -95,9 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				E0872C5F1A10D8B80068EC2D /* Color.cpp */,
-				E0872C601A10D8B80068EC2D /* Color.h */,
 				E0872C621A10DB9A0068EC2D /* Intersection.cpp */,
-				E0872C631A10DB9A0068EC2D /* Intersection.h */,
 			);
 			name = internals;
 			sourceTree = "<group>";
@@ -106,9 +100,23 @@
 			isa = PBXGroup;
 			children = (
 				E02B7D191A122F73004511AD /* PPMImage.cpp */,
-				E02B7D1A1A122F73004511AD /* PPMImage.h */,
 			);
 			name = utils;
+			sourceTree = "<group>";
+		};
+		E02B7D1C1A1237CD004511AD /* include */ = {
+			isa = PBXGroup;
+			children = (
+				E0872C5D1A10D85F0068EC2D /* Shape.h */,
+				E07718C01A10CDBE0020A0D8 /* RayTracer.h */,
+				E0872C5A1A10D5800068EC2D /* Ray.h */,
+				E07718C31A10D3E70020A0D8 /* Vector.h */,
+				E0872C661A10EC850068EC2D /* Light.h */,
+				E0872C631A10DB9A0068EC2D /* Intersection.h */,
+				E0872C601A10D8B80068EC2D /* Color.h */,
+				E02B7D1A1A122F73004511AD /* PPMImage.h */,
+			);
+			name = include;
 			sourceTree = "<group>";
 		};
 		E07718AC1A10CD480020A0D8 = {
@@ -130,6 +138,7 @@
 		E07718B71A10CD480020A0D8 /* RayTracer */ = {
 			isa = PBXGroup;
 			children = (
+				E02B7D1C1A1237CD004511AD /* include */,
 				E02B7D181A122F57004511AD /* utils */,
 				E02B7D171A122C7F004511AD /* internals */,
 				E02B7D151A122BA8004511AD /* lights */,
@@ -137,7 +146,6 @@
 				E02B7D131A122B79004511AD /* linear */,
 				E07718B81A10CD480020A0D8 /* main.cpp */,
 				E07718BF1A10CDBE0020A0D8 /* RayTracer.cpp */,
-				E07718C01A10CDBE0020A0D8 /* RayTracer.h */,
 			);
 			path = RayTracer;
 			sourceTree = "<group>";

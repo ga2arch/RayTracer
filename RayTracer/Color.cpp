@@ -21,9 +21,9 @@ void Color::clamp(float min, float max) {
 
 std::tuple<uchar, uchar, uchar> Color::to_rgb() {
     uchar r_, g_, b_;
-    r_ = static_cast<unsigned char>(r * 255.0f);
-    g_ = static_cast<unsigned char>(g * 255.0f);
-    b_ = static_cast<unsigned char>(b * 255.0f);
+    r_ = static_cast<uchar>(r * 255.0f);
+    g_ = static_cast<uchar>(g * 255.0f);
+    b_ = static_cast<uchar>(b * 255.0f);
     
     return std::make_tuple(r_, g_, b_);
 }
