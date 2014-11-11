@@ -44,6 +44,7 @@ public:
     void draw();
 
 private:
+    Rng rng;
     ShapeSet& scene;
     std::list<Shape*> lights;
     
@@ -57,6 +58,8 @@ private:
                         const Vector& targetUp,
                         float xPos,
                         float yPos);
+    
+    void process_lights(Intersection& i, Color& pixel_color);
     
     Color trace(float x, float y);
 

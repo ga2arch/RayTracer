@@ -34,7 +34,6 @@ Ray RayTracer::make_camera_ray(float fov,
 }
 
 Color RayTracer::trace(float x, float y) {
-    Rng rng;
     Color pixel_color(0.0f, 0.0f, 0.0f);
     
     for (size_t si = 0; si < kNumPixelSamples; si++) {
@@ -51,33 +50,37 @@ Color RayTracer::trace(float x, float y) {
         Intersection i(ray);
         if (scene.intersect(i)) {
             pixel_color += i.emitted;
-            Point pos = i.position();
-            
-            for (Shape* light: lights) {
-                Point light_point;
-                Vector light_normal;
-                Light* light_shape = dynamic_cast<Light*>(light);
-                light_shape->sample_surface(rng.nextFloat(),
-                                            rng.nextFloat(),
-                                            pos,
-                                            light_point,
-                                            light_normal);
-                
-                Vector to_light = light_point - pos;
-                float light_distance = to_light.normalize();
-                Ray shadow_ray(pos, to_light, light_distance);
-                Intersection shadow_intersection(shadow_ray);
-                bool intersected = scene.intersect(shadow_intersection);
-                
-                if (!intersected || shadow_intersection.shape == light_shape) {
-                    float light_attenuation = std::max(0.0f, dot(i.normal, to_light));
-                    pixel_color += i.color * light_shape->emitted() * light_attenuation;
-                }
-            }
+            process_lights(i, pixel_color);
         }
     }
     
     return pixel_color;
+}
+
+void RayTracer::process_lights(Intersection& i, Color& pixel_color) {
+    Point pos = i.position();
+    
+    for (Shape* light: lights) {
+        Point light_point;
+        Vector light_normal;
+        Light* light_shape = dynamic_cast<Light*>(light);
+        light_shape->sample_surface(rng.nextFloat(),
+                                    rng.nextFloat(),
+                                    pos,
+                                    light_point,
+                                    light_normal);
+        
+        Vector to_light = light_point - pos;
+        float light_distance = to_light.normalize();
+        Ray shadow_ray(pos, to_light, light_distance);
+        Intersection shadow_intersection(shadow_ray);
+        bool intersected = scene.intersect(shadow_intersection);
+        
+        if (!intersected || shadow_intersection.shape == light_shape) {
+            float light_attenuation = std::max(0.0f, dot(i.normal, to_light));
+            pixel_color += i.color * light_shape->emitted() * light_attenuation;
+        }
+    }
 }
 
 void RayTracer::draw() {
