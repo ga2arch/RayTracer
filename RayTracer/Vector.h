@@ -10,6 +10,7 @@
 #define __RayTracer__Vector__
 
 #include <stdio.h>
+#include <utility>
 
 class Vector {
     
