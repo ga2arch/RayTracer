@@ -13,7 +13,9 @@ RectangleLight::RectangleLight(const Point& pos,
                                const Vector& side2,
                                const Color& color,
                                float power):
-Light(color, power), side1(side1), side2(side2) {};
+Light(color, power),
+side1(side1),
+side2(side2) {};
 
 bool RectangleLight::intersect(Intersection& i) {
     
