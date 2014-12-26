@@ -37,7 +37,7 @@ int main(int argc, const char * argv[]) {
     
     scene.add_shape(&sphere);
     
-    RectangleLight areaLight(Point(-2.5f, 2.0f, -2.5f),
+    RectangleLight areaLight(Point(-1.5f, 2.0f, -1.5f),
                              Vector(5.0f, 0.0f, 0.0f),
                              Vector(0.0f, 0.0f, 5.0f),
                              Color(1.0f, 0.5f, 1.0f),

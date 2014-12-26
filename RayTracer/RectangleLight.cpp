@@ -28,6 +28,7 @@ bool RectangleLight::intersect(Intersection& i) {
     
     Vector side1_norm = side1;
     Vector side2_norm = side2;
+    
     float side1_length = side1_norm.normalize();
     float side2_length = side2_norm.normalize();
     
