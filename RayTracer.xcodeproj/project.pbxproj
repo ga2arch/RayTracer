@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E0E825BB1A4F0BFB00C4FF06 /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0E825B91A4F0BFB00C4FF06 /* Ray.cpp */; };
 		E0E825BE1A4F10DA00C4FF06 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0E825BC1A4F10DA00C4FF06 /* Transform.cpp */; };
+		E0FC86771A4F4270007615C7 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0FC86751A4F4270007615C7 /* Shape.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,8 @@
 		E0E825BC1A4F10DA00C4FF06 /* Transform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Transform.cpp; sourceTree = SOURCE_ROOT; };
 		E0E825BD1A4F10DA00C4FF06 /* Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transform.h; sourceTree = SOURCE_ROOT; };
 		E0E825BF1A4F110300C4FF06 /* RayTracer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RayTracer.h; sourceTree = SOURCE_ROOT; };
+		E0FC86751A4F4270007615C7 /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = SOURCE_ROOT; };
+		E0FC86761A4F4270007615C7 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				E0E825BC1A4F10DA00C4FF06 /* Transform.cpp */,
 				E0E825BD1A4F10DA00C4FF06 /* Transform.h */,
 				E0E825BF1A4F110300C4FF06 /* RayTracer.h */,
+				E0FC86751A4F4270007615C7 /* Shape.cpp */,
+				E0FC86761A4F4270007615C7 /* Shape.h */,
 			);
 			path = RayTracer;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			files = (
 				E0E825BE1A4F10DA00C4FF06 /* Transform.cpp in Sources */,
 				E0E825BB1A4F0BFB00C4FF06 /* Ray.cpp in Sources */,
+				E0FC86771A4F4270007615C7 /* Shape.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -117,3 +117,10 @@ glm::vec3 Transform::operator()(const glm::vec3 &pt) const {
     if (wp == 1. || !wp) return glm::vec3(xp, yp, zp);
     else return glm::vec3(xp, yp, zp)/wp;
 }
+
+Ray Transform::operator()(const Ray& r) const {
+    auto ret = r;
+    ret.o = (*this)(ret.o);
+    ret.d = (*this)(ret.d);
+    return ret;
+}

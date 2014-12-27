@@ -10,6 +10,7 @@
 #define __RayTracer__Transform__
 
 #include <stdio.h>
+#include "Ray.h"
 #include "RayTracer.h"
 
 class Transform {
@@ -30,6 +31,7 @@ public:
     static Transform LookAt(const Point& pos, const Point& look, const Vector& up);
 
     glm::vec3 operator()(const glm::vec3& pt) const;
+    Ray operator()(const Ray& ray) const;
 
 private:
     glm::mat4x4 m, m_inv;
