@@ -107,3 +107,13 @@ Transform Transform::LookAt(const Point &pos, const Point &look, const Vector &u
     
     return Transform(glm::inverse(m), m);
 }
+
+glm::vec3 Transform::operator()(const glm::vec3 &pt) const {
+    float xp = m[0][0]*pt.x + m[0][1]*pt.y + m[0][2]*pt.z;
+    float yp = m[1][0]*pt.x + m[1][1]*pt.y + m[1][2]*pt.z;
+    float zp = m[2][0]*pt.x + m[2][1]*pt.y + m[2][2]*pt.z;
+    float wp = m[3][0]*pt.x + m[3][1]*pt.y + m[3][2]*pt.z;
+    
+    if (wp == 1. || !wp) return glm::vec3(xp, yp, zp);
+    else return glm::vec3(xp, yp, zp)/wp;
+}

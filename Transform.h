@@ -29,10 +29,24 @@ public:
 
     static Transform LookAt(const Point& pos, const Point& look, const Vector& up);
 
+    glm::vec3 operator()(const glm::vec3& pt) const;
 
 private:
     glm::mat4x4 m, m_inv;
     
 };
+
+//inline Vector Transform::operator()(const Vector &v) const {
+//    return Vector(m[0][0]*v.x + m[0][1]*v.y + m[0][2]*v.z,
+//                  m[1][0]*v.x + m[1][1]*v.y + m[1][2]*v.z,
+//                  m[2][0]*v.x + m[2][1]*v.y + m[2][2]*v.z);
+//}
+//
+//inline Normal Transform::operator()(const Normal &n) const {
+//    return Vector(m[0][0]*n.x + m[0][1]*n.y + m[0][2]*n.z,
+//                  m[1][0]*n.x + m[1][1]*n.y + m[1][2]*n.z,
+//                  m[2][0]*n.x + m[2][1]*n.y + m[2][2]*n.z);
+//}
+
 
 #endif /* defined(__RayTracer__Transform__) */

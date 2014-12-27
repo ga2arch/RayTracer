@@ -16,6 +16,7 @@
 
 using Point  = glm::vec3;
 using Vector = glm::vec3;
+using Normal = glm::vec3;
 
 float radians (float d) {
     return static_cast<float>(d * M_PI / 180);
