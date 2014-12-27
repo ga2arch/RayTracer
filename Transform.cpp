@@ -28,3 +28,17 @@ Transform Transform::Translate(const Vector &delta) {
     
     return Transform(m, m_inv);
 }
+
+Transform Transform::Scale(float x, float y, float z) {
+    glm::mat4x4 m(x, 0, 0, 0,
+                  0, y, 0, 0,
+                  0, 0, z, 0,
+                  0, 0, 0, 1);
+    
+    glm::mat4x4 m_inv(1.f/x, 0, 0, 0,
+                      0, 1.f/y, 0, 0,
+                      0, 0, 1.f/z, 0,
+                      0, 0, 0,     1);
+    
+    return Transform(m, m_inv);
+}

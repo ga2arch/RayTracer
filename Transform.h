@@ -21,6 +21,7 @@ public:
     
     static Transform Inverse(const Transform& t);
     static Transform Translate(const Vector& delta);
+    static Transform Scale(float x, float y, float z);
     
 private:
     glm::mat4x4 m, m_inv;
