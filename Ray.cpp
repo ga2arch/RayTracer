@@ -7,3 +7,12 @@
 //
 
 #include "Ray.h"
+
+Ray::Ray(): mint(0.f), maxt(INFINITY), time(0.f), depth(0) {}
+
+Ray::Ray(const Point& origin, const Vector& direction,
+         const Ray& parent, float start, float end)
+: o(origin), d(direction), mint(start), maxt(end),
+  time(parent.time), depth(parent.depth + 1) {}
+
+Point Ray::operator()(float t) { return o + d * t; }
