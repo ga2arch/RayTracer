@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E0E825BB1A4F0BFB00C4FF06 /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0E825B91A4F0BFB00C4FF06 /* Ray.cpp */; };
+		E0E825BE1A4F10DA00C4FF06 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0E825BC1A4F10DA00C4FF06 /* Transform.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,9 @@
 		E07718B51A10CD480020A0D8 /* RayTracer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RayTracer; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E825B91A4F0BFB00C4FF06 /* Ray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ray.cpp; sourceTree = SOURCE_ROOT; };
 		E0E825BA1A4F0BFB00C4FF06 /* Ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ray.h; sourceTree = SOURCE_ROOT; };
+		E0E825BC1A4F10DA00C4FF06 /* Transform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Transform.cpp; sourceTree = SOURCE_ROOT; };
+		E0E825BD1A4F10DA00C4FF06 /* Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transform.h; sourceTree = SOURCE_ROOT; };
+		E0E825BF1A4F110300C4FF06 /* RayTracer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RayTracer.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,9 @@
 			children = (
 				E0E825B91A4F0BFB00C4FF06 /* Ray.cpp */,
 				E0E825BA1A4F0BFB00C4FF06 /* Ray.h */,
+				E0E825BC1A4F10DA00C4FF06 /* Transform.cpp */,
+				E0E825BD1A4F10DA00C4FF06 /* Transform.h */,
+				E0E825BF1A4F110300C4FF06 /* RayTracer.h */,
 			);
 			path = RayTracer;
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0E825BE1A4F10DA00C4FF06 /* Transform.cpp in Sources */,
 				E0E825BB1A4F0BFB00C4FF06 /* Ray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
