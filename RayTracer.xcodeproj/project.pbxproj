@@ -7,18 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E02B7D1B1A122F73004511AD /* PPMImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E02B7D191A122F73004511AD /* PPMImage.cpp */; };
-		E03C75831A12458000424B5A /* Plane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E03C75811A12458000424B5A /* Plane.cpp */; };
-		E03C75861A1245C400424B5A /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E03C75841A1245C400424B5A /* Sphere.cpp */; };
-		E03C75891A12468900424B5A /* RectangleLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E03C75871A12468900424B5A /* RectangleLight.cpp */; };
-		E07718B91A10CD480020A0D8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E07718B81A10CD480020A0D8 /* main.cpp */; };
-		E07718C11A10CDBE0020A0D8 /* RayTracer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E07718BF1A10CDBE0020A0D8 /* RayTracer.cpp */; };
-		E07718C41A10D3E70020A0D8 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E07718C21A10D3E70020A0D8 /* Vector.cpp */; };
-		E0872C5B1A10D5800068EC2D /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C591A10D5800068EC2D /* Ray.cpp */; };
-		E0872C5E1A10D85F0068EC2D /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C5C1A10D85F0068EC2D /* Shape.cpp */; };
-		E0872C611A10D8B80068EC2D /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C5F1A10D8B80068EC2D /* Color.cpp */; };
-		E0872C641A10DB9A0068EC2D /* Intersection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C621A10DB9A0068EC2D /* Intersection.cpp */; };
-		E0872C671A10EC850068EC2D /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0872C651A10EC850068EC2D /* Light.cpp */; };
+		E0E825BB1A4F0BFB00C4FF06 /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0E825B91A4F0BFB00C4FF06 /* Ray.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,30 +23,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E02B7D191A122F73004511AD /* PPMImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PPMImage.cpp; sourceTree = "<group>"; };
-		E02B7D1A1A122F73004511AD /* PPMImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMImage.h; sourceTree = "<group>"; };
-		E03C75811A12458000424B5A /* Plane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plane.cpp; sourceTree = "<group>"; };
-		E03C75821A12458000424B5A /* Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
-		E03C75841A1245C400424B5A /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = "<group>"; };
-		E03C75851A1245C400424B5A /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
-		E03C75871A12468900424B5A /* RectangleLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RectangleLight.cpp; sourceTree = "<group>"; };
-		E03C75881A12468900424B5A /* RectangleLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectangleLight.h; sourceTree = "<group>"; };
 		E07718B51A10CD480020A0D8 /* RayTracer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RayTracer; sourceTree = BUILT_PRODUCTS_DIR; };
-		E07718B81A10CD480020A0D8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		E07718BF1A10CDBE0020A0D8 /* RayTracer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RayTracer.cpp; sourceTree = "<group>"; };
-		E07718C01A10CDBE0020A0D8 /* RayTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RayTracer.h; sourceTree = "<group>"; };
-		E07718C21A10D3E70020A0D8 /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
-		E07718C31A10D3E70020A0D8 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
-		E0872C591A10D5800068EC2D /* Ray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ray.cpp; sourceTree = "<group>"; };
-		E0872C5A1A10D5800068EC2D /* Ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ray.h; sourceTree = "<group>"; };
-		E0872C5C1A10D85F0068EC2D /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
-		E0872C5D1A10D85F0068EC2D /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
-		E0872C5F1A10D8B80068EC2D /* Color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Color.cpp; sourceTree = "<group>"; };
-		E0872C601A10D8B80068EC2D /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
-		E0872C621A10DB9A0068EC2D /* Intersection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Intersection.cpp; sourceTree = "<group>"; };
-		E0872C631A10DB9A0068EC2D /* Intersection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intersection.h; sourceTree = "<group>"; };
-		E0872C651A10EC850068EC2D /* Light.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Light.cpp; sourceTree = "<group>"; };
-		E0872C661A10EC850068EC2D /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
+		E0E825B91A4F0BFB00C4FF06 /* Ray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ray.cpp; sourceTree = SOURCE_ROOT; };
+		E0E825BA1A4F0BFB00C4FF06 /* Ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ray.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,69 +39,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E02B7D131A122B79004511AD /* linear */ = {
-			isa = PBXGroup;
-			children = (
-				E07718C21A10D3E70020A0D8 /* Vector.cpp */,
-				E0872C591A10D5800068EC2D /* Ray.cpp */,
-			);
-			name = linear;
-			sourceTree = "<group>";
-		};
-		E02B7D141A122B99004511AD /* shapes */ = {
-			isa = PBXGroup;
-			children = (
-				E0872C5C1A10D85F0068EC2D /* Shape.cpp */,
-				E03C75811A12458000424B5A /* Plane.cpp */,
-				E03C75841A1245C400424B5A /* Sphere.cpp */,
-			);
-			name = shapes;
-			sourceTree = "<group>";
-		};
-		E02B7D151A122BA8004511AD /* lights */ = {
-			isa = PBXGroup;
-			children = (
-				E0872C651A10EC850068EC2D /* Light.cpp */,
-				E03C75871A12468900424B5A /* RectangleLight.cpp */,
-			);
-			name = lights;
-			sourceTree = "<group>";
-		};
-		E02B7D171A122C7F004511AD /* internals */ = {
-			isa = PBXGroup;
-			children = (
-				E0872C5F1A10D8B80068EC2D /* Color.cpp */,
-				E0872C621A10DB9A0068EC2D /* Intersection.cpp */,
-			);
-			name = internals;
-			sourceTree = "<group>";
-		};
-		E02B7D181A122F57004511AD /* utils */ = {
-			isa = PBXGroup;
-			children = (
-				E02B7D191A122F73004511AD /* PPMImage.cpp */,
-			);
-			name = utils;
-			sourceTree = "<group>";
-		};
-		E02B7D1C1A1237CD004511AD /* include */ = {
-			isa = PBXGroup;
-			children = (
-				E0872C5D1A10D85F0068EC2D /* Shape.h */,
-				E07718C01A10CDBE0020A0D8 /* RayTracer.h */,
-				E0872C5A1A10D5800068EC2D /* Ray.h */,
-				E07718C31A10D3E70020A0D8 /* Vector.h */,
-				E0872C661A10EC850068EC2D /* Light.h */,
-				E0872C631A10DB9A0068EC2D /* Intersection.h */,
-				E0872C601A10D8B80068EC2D /* Color.h */,
-				E02B7D1A1A122F73004511AD /* PPMImage.h */,
-				E03C75881A12468900424B5A /* RectangleLight.h */,
-				E03C75821A12458000424B5A /* Plane.h */,
-				E03C75851A1245C400424B5A /* Sphere.h */,
-			);
-			name = include;
-			sourceTree = "<group>";
-		};
 		E07718AC1A10CD480020A0D8 = {
 			isa = PBXGroup;
 			children = (
@@ -153,14 +58,8 @@
 		E07718B71A10CD480020A0D8 /* RayTracer */ = {
 			isa = PBXGroup;
 			children = (
-				E02B7D1C1A1237CD004511AD /* include */,
-				E02B7D181A122F57004511AD /* utils */,
-				E02B7D171A122C7F004511AD /* internals */,
-				E02B7D151A122BA8004511AD /* lights */,
-				E02B7D141A122B99004511AD /* shapes */,
-				E02B7D131A122B79004511AD /* linear */,
-				E07718B81A10CD480020A0D8 /* main.cpp */,
-				E07718BF1A10CDBE0020A0D8 /* RayTracer.cpp */,
+				E0E825B91A4F0BFB00C4FF06 /* Ray.cpp */,
+				E0E825BA1A4F0BFB00C4FF06 /* Ray.h */,
 			);
 			path = RayTracer;
 			sourceTree = "<group>";
@@ -221,18 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0872C5B1A10D5800068EC2D /* Ray.cpp in Sources */,
-				E0872C611A10D8B80068EC2D /* Color.cpp in Sources */,
-				E03C75831A12458000424B5A /* Plane.cpp in Sources */,
-				E0872C671A10EC850068EC2D /* Light.cpp in Sources */,
-				E03C75891A12468900424B5A /* RectangleLight.cpp in Sources */,
-				E0872C641A10DB9A0068EC2D /* Intersection.cpp in Sources */,
-				E07718B91A10CD480020A0D8 /* main.cpp in Sources */,
-				E0872C5E1A10D85F0068EC2D /* Shape.cpp in Sources */,
-				E03C75861A1245C400424B5A /* Sphere.cpp in Sources */,
-				E02B7D1B1A122F73004511AD /* PPMImage.cpp in Sources */,
-				E07718C11A10CDBE0020A0D8 /* RayTracer.cpp in Sources */,
-				E07718C41A10D3E70020A0D8 /* Vector.cpp in Sources */,
+				E0E825BB1A4F0BFB00C4FF06 /* Ray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,14 +204,18 @@
 		E07718BD1A10CD480020A0D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Debug;
 		};
 		E07718BE1A10CD480020A0D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Release;
 		};
