@@ -22,9 +22,12 @@ public:
     static Transform Inverse(const Transform& t);
     static Transform Translate(const Vector& delta);
     static Transform Scale(float x, float y, float z);
+    
     static Transform RotateX(float angle);
     static Transform RotateY(float angle);
     static Transform RotateZ(float angle);
+
+    static Transform LookAt(const Point& pos, const Point& look, const Vector& up);
 
 
 private:
