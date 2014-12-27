@@ -42,3 +42,39 @@ Transform Transform::Scale(float x, float y, float z) {
     
     return Transform(m, m_inv);
 }
+
+Transform Transform::RotateX(float angle) {
+    float sin_t = sinf(radians(angle));
+    float cos_t = cosf(radians(angle));
+    
+    glm::mat4x4 m(1, 0, 0, 0,
+                  0, cos_t, -sin_t, 0,
+                  0, sin_t, cos_t, 0,
+                  0, 0, 0, 0);
+    
+    return Transform(m, glm::transpose(m));
+}
+
+Transform Transform::RotateY(float angle) {
+    float sin_t = sinf(radians(angle));
+    float cos_t = cosf(radians(angle));
+    
+    glm::mat4x4 m(cos_t, 0, sin_t, 0,
+                  0, 1, 0, 0,
+                  -sin_t, 0, cos_t, 0,
+                  0, 0, 0, 1);
+    
+    return Transform(m, glm::transpose(m));
+}
+
+Transform Transform::RotateZ(float angle) {
+    float sin_t = sinf(radians(angle));
+    float cos_t = cosf(radians(angle));
+    
+    glm::mat4x4 m(cos_t, -sin_t, 0, 0,
+                  sin_t, cos_t, 0, 0,
+                  0, 0, 1, 0,
+                  0, 0, 0, 1);
+    
+    return Transform(m, glm::transpose(m));
+}
