@@ -22,4 +22,8 @@ float radians (float d) {
     return static_cast<float>(d * M_PI / 180);
 }
 
+inline float clamp(float x, float a, float b) {
+    return x < a ? a : (x > b ? b : x);
+}
+
 #endif

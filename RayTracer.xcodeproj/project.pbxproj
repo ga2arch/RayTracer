@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E09BF2781A506E2F0012CF78 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09BF2761A506E2F0012CF78 /* Sphere.cpp */; };
 		E0E825BB1A4F0BFB00C4FF06 /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0E825B91A4F0BFB00C4FF06 /* Ray.cpp */; };
 		E0E825BE1A4F10DA00C4FF06 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0E825BC1A4F10DA00C4FF06 /* Transform.cpp */; };
 		E0FC86771A4F4270007615C7 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0FC86751A4F4270007615C7 /* Shape.cpp */; };
@@ -26,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		E07718B51A10CD480020A0D8 /* RayTracer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RayTracer; sourceTree = BUILT_PRODUCTS_DIR; };
+		E09BF2761A506E2F0012CF78 /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = SOURCE_ROOT; };
+		E09BF2771A506E2F0012CF78 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = SOURCE_ROOT; };
 		E0E825B91A4F0BFB00C4FF06 /* Ray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ray.cpp; sourceTree = SOURCE_ROOT; };
 		E0E825BA1A4F0BFB00C4FF06 /* Ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ray.h; sourceTree = SOURCE_ROOT; };
 		E0E825BC1A4F10DA00C4FF06 /* Transform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Transform.cpp; sourceTree = SOURCE_ROOT; };
@@ -72,6 +75,8 @@
 				E0E825BF1A4F110300C4FF06 /* RayTracer.h */,
 				E0FC86751A4F4270007615C7 /* Shape.cpp */,
 				E0FC86761A4F4270007615C7 /* Shape.h */,
+				E09BF2761A506E2F0012CF78 /* Sphere.cpp */,
+				E09BF2771A506E2F0012CF78 /* Sphere.h */,
 			);
 			path = RayTracer;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			files = (
 				E0E825BE1A4F10DA00C4FF06 /* Transform.cpp in Sources */,
 				E0E825BB1A4F0BFB00C4FF06 /* Ray.cpp in Sources */,
+				E09BF2781A506E2F0012CF78 /* Sphere.cpp in Sources */,
 				E0FC86771A4F4270007615C7 /* Shape.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
