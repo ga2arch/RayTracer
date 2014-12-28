@@ -18,7 +18,7 @@ public:
     Sphere(const Transform* o2w, const Transform* w2o, bool ro,
            float rad, float z0, float z1, float pm);
     
-    bool intersection(const Ray& r, float* thit, float* ray_e) const;
+    bool intersect(const Ray& r, float* thit, float* ray_e) const;
     
 private:
     float radius;
