@@ -45,4 +45,6 @@ bool Sphere::intersect(const Ray &r, float *thit, float *ray_e) const {
         thit = &t1;
         if (*thit > ray.maxt) return false;
     }
+    
+    return true;
 }
