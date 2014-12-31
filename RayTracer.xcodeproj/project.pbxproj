@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E070043D1A546B480011E1FB /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E070043B1A546B480011E1FB /* Camera.cpp */; };
 		E09BF2781A506E2F0012CF78 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09BF2761A506E2F0012CF78 /* Sphere.cpp */; };
 		E0E825BB1A4F0BFB00C4FF06 /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0E825B91A4F0BFB00C4FF06 /* Ray.cpp */; };
 		E0E825BE1A4F10DA00C4FF06 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0E825BC1A4F10DA00C4FF06 /* Transform.cpp */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E070043B1A546B480011E1FB /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = SOURCE_ROOT; };
+		E070043C1A546B480011E1FB /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = SOURCE_ROOT; };
 		E07718B51A10CD480020A0D8 /* RayTracer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RayTracer; sourceTree = BUILT_PRODUCTS_DIR; };
 		E09BF2761A506E2F0012CF78 /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = SOURCE_ROOT; };
 		E09BF2771A506E2F0012CF78 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = SOURCE_ROOT; };
@@ -73,6 +76,8 @@
 				E0E825BC1A4F10DA00C4FF06 /* Transform.cpp */,
 				E0E825BD1A4F10DA00C4FF06 /* Transform.h */,
 				E0E825BF1A4F110300C4FF06 /* RayTracer.h */,
+				E070043B1A546B480011E1FB /* Camera.cpp */,
+				E070043C1A546B480011E1FB /* Camera.h */,
 				E0FC86751A4F4270007615C7 /* Shape.cpp */,
 				E0FC86761A4F4270007615C7 /* Shape.h */,
 				E09BF2761A506E2F0012CF78 /* Sphere.cpp */,
@@ -139,6 +144,7 @@
 			files = (
 				E0E825BE1A4F10DA00C4FF06 /* Transform.cpp in Sources */,
 				E0E825BB1A4F0BFB00C4FF06 /* Ray.cpp in Sources */,
+				E070043D1A546B480011E1FB /* Camera.cpp in Sources */,
 				E09BF2781A506E2F0012CF78 /* Sphere.cpp in Sources */,
 				E0FC86771A4F4270007615C7 /* Shape.cpp in Sources */,
 			);
