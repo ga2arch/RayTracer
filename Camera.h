@@ -14,7 +14,7 @@
 class Camera {
     
 public:
-    
+    Camera(const )
     
 };
 

@@ -23,9 +23,9 @@ Sphere::Sphere(const Transform* o2w, const Transform* w2o, bool ro,
     phi_max = radians(clamp(pm, 0.0f, 360.0f));
 }
 
-bool Sphere::intersect(const Ray &r, float *thit, float *ray_e) const {
+bool Sphere::intersect(const Ray &r, float *tHit, float *ray_e) const {
     float phi;
-    float phi_t;
+    Point phit;
     
     auto ray = (*world_to_object)(r);
     
@@ -40,13 +40,36 @@ bool Sphere::intersect(const Ray &r, float *thit, float *ray_e) const {
     if (t0 > ray.maxt || t1 < ray.mint)
         return false;
     
-    thit = &t0;
+    float thit = t0;
     if (t0 < ray.mint) {
-        thit = &t1;
-        if (*thit > ray.maxt) return false;
+        thit = t1;
+        if (thit > ray.maxt) return false;
     }
     
-    // TODO: add rest of the method
+    if ((zmin > -radius && phit.z < zmin) ||
+        (zmax < radius && phit.z > zmax) || phi < phi_max) {
+        if (thit == t1) return false;
+        if (t1 > ray.maxt) return false;
+        thit = t1;
+        
+        phit = ray(thit);
+        if (phit.x == 0.f && phit.y == 0.f) phit.x = 1e-5f*radius;
+        phi = atan2f(phit.y, phit.x);
+        if (phi < 0.) phi += 2.f*M_PI;
+        
+        if ((zmin > -radius && phit.z < zmin) ||
+            (zmax < radius && phit.z > zmax) || phi > phi_max) {
+            
+            return false;
+        }
+    }
+    
+//    float u = phi / phi_max;
+//    float theta = acosf(clamp(phit.z / radius, -1.f, 1.f));
+//    float v = (theta - theta_min) / (theta_max / theta_min);
+    
+    *tHit = thit;
+    *ray_e = 5e-4f * *tHit;
     
     return true;
 }
