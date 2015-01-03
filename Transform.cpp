@@ -124,3 +124,10 @@ Ray Transform::operator()(const Ray& r) const {
     ret.d = (*this)(ret.d);
     return ret;
 }
+
+Transform Transform::operator*(const Transform &t) const {
+    auto m1 = m * t.m;
+    auto m2 = m * t.m_inv;
+    
+    return Transform(m1, m2);
+}

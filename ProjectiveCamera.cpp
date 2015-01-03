@@ -9,11 +9,14 @@
 #include "ProjectiveCamera.h"
 
 ProjectiveCamera::ProjectiveCamera(const Transform& c2w, const Transform& proj,
-                                   const float screen_window[4], float sopen, float sclose)
+                                   const float screen_window[4], float sopen, float sclose,
+                                   Film *film)
 : Camera(c2w, sopen, sclose) {
     
-    auto screen_to_raster = glm::scale(<#const detail::tmat4x4<T, P> &m#>, <#const detail::tvec3<T, P> &v#>)
+    screen_to_raster = Transform::Scale(float(film->x_res),
+                                        float(film->y_res),
+                                        float(1.f));
     
     camera_to_screen = proj;
-    raster_to_camera = glm::inverse(camera_to_screen) * raster_to_screen;
+    raster_to_camera = Transform::Inverse(camera_to_screen) * raster_to_screen;
 }

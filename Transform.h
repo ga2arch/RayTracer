@@ -32,7 +32,8 @@ public:
 
     glm::vec3 operator()(const glm::vec3& pt) const;
     Ray operator()(const Ray& ray) const;
-
+    Transform operator*(const Transform &t) const;
+    
 private:
     glm::mat4x4 m, m_inv;
     
