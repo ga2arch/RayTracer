@@ -20,6 +20,10 @@ public:
                       float sopen, float sclose,
                       float fov, Film *film);
 
+    float generate_ray(const Point &p, Ray *ray);
+    
+private:
+    Vector dx_cam, dy_cam;
     
 };
 

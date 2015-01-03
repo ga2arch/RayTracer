@@ -17,7 +17,7 @@ class Ray {
     
 public:
     Ray();
-    Ray(const Point& origin, const Vector& direction, const Ray& parent,
+    Ray(const Point& origin, const Vector& direction,
         float start, float end = INFINITY);
     
     Point operator()(float t);
