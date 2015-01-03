@@ -10,12 +10,19 @@
 #define __RayTracer__Camera__
 
 #include <stdio.h>
+#include "Transform.h"
 
 class Camera {
     
 public:
-    Camera(const )
+    Camera(const Transform& c2w, float sopen, float sclose);
+    
+    virtual float generate_ray(Ray& ray) const =0;
+    
+    Transform cam2world;
+    const float shutter_open, shutter_close;
     
 };
+
 
 #endif /* defined(__RayTracer__Camera__) */

@@ -7,3 +7,7 @@
 //
 
 #include "Camera.h"
+
+Camera::Camera(const Transform& c2w, float sopen, float sclose)
+: cam2world(c2w), shutter_open(sopen), shutter_close(sclose) {}
+
