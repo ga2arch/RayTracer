@@ -15,6 +15,7 @@ class Film {
     
 public:
     
+    const int x_res, y_res;
     
 };
 
