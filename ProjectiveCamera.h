@@ -20,7 +20,6 @@ public:
                      const float screen_window[4], float sopen, float sclose,
                      Film* film);
     
-    
     Transform camera_to_screen, raster_to_camera;
     
 protected:
