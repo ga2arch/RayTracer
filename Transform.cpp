@@ -131,3 +131,13 @@ Transform Transform::operator*(const Transform &t) const {
     
     return Transform(m1, m2);
 }
+
+Transform Transform::Perspective(float fov, float n, float f) {
+    glm::mat4x4 persp(1, 0, 0, 0,
+                      0, 1, 0, 0,
+                      0, 0, f/(f-n), (-f*n)/(f-n),
+                      0, 0, 1, 0);
+    
+    float inv_tan_ang = 1.f / tanf(radians(fov) / 2.f);
+    return Transform::Scale(inv_tan_ang, inv_tan_ang, 1) * Transform(persp);
+}

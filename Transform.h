@@ -29,6 +29,7 @@ public:
     static Transform RotateZ(float angle);
 
     static Transform LookAt(const Point& pos, const Point& look, const Vector& up);
+    static Transform Perspective(float fov, float n, float f);
 
     glm::vec3 operator()(const glm::vec3& pt) const;
     Ray operator()(const Ray& ray) const;
